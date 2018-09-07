@@ -6,7 +6,9 @@
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "fake": "node data/fakeDataGenerator.js"
+  },
   "dependencies": {
     "express": "^4.16.3",
     "lodash": "^4.17.10",
