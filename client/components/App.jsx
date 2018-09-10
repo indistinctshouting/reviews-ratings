@@ -9,10 +9,16 @@ export default class App extends React.Component {
       reviews: []
     }
   }
+  
+  componentDidMount() {
+    // let randomRestaurantId = Math.floor((Math.random() * 100) + 1);
+    this.getReviewData(38);
+  }
 
   getReviewData(id) {
     axios.post('/reviews', {id})
       .then((response) => {
+        console.log(response.data);
         this.setState({
           reviews: response.data
         })
@@ -22,7 +28,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <ReviewList />
+        <ReviewList reviews={this.state.reviews}/>
       </div>
     )
   }
