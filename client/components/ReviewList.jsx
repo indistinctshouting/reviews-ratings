@@ -7,7 +7,7 @@ const ReviewList = (props) => (
     <ul>
       {
         _.map(props.reviews, (review) => {
-          return <Review review={review}/>;
+          return <Review key={review._id} review={review}/>;
         })
       }
     </ul>
