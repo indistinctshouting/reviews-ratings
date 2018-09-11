@@ -14,6 +14,7 @@ export default class Review extends React.Component {
     return (
       <div>
         <div className="review-sidebar">
+          Stuff here
         </div>
         <div className="review-wrapper">
           <div className="rating-box"><RatingBox rating={this.props.review.rating} /></div>
