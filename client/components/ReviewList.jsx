@@ -3,7 +3,7 @@ import Review from './Review.jsx';
 import _ from 'lodash';
 
 const ReviewList = (props) => (
-  <div>
+  <div className="review-list">
     <ul>
       {
         _.map(props.reviews, (review) => {
