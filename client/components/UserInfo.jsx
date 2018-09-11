@@ -10,9 +10,9 @@ const UserInfo = (props) => (
         {props.owner.name}
       </h3>
       <div>{props.owner.location}</div>
-      <div>{props.owner.friends}</div>
-      <div>{props.owner.photos}</div>
-      <div>{props.owner.reviewCount}</div>
+      <div>{props.owner.friends} Friends</div>
+      <div>{props.owner.photos} Photos</div>
+      <div>{props.owner.reviewCount} Reviews</div>
       <div>{props.owner.elite ? 'Elite \'18' : ''}</div>
     </div>
   </div>
