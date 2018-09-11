@@ -1,5 +1,6 @@
 import React from 'react';
 import RatingBox from './RatingBox.jsx';
+import TextBlock from './TextBlock.jsx';
 // might convert to stateless functional component
 export default class Review extends React.Component {
   constructor(props) {
@@ -12,7 +13,13 @@ export default class Review extends React.Component {
   render() {
     return (
       <div>
-        <RatingBox rating={this.props.review.rating}/>
+        <div className="review-sidebar">
+
+        </div>
+        <div className="review-wrapper">
+          <div className="rating-box"><RatingBox rating={this.props.review.rating} /></div>
+          <div><TextBlock className="text-block" text={this.props.review.text} /></div>
+        </div>
         Yeah!
       </div>
     );
