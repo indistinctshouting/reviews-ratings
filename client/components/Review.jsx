@@ -14,13 +14,11 @@ export default class Review extends React.Component {
     return (
       <div>
         <div className="review-sidebar">
-
         </div>
         <div className="review-wrapper">
           <div className="rating-box"><RatingBox rating={this.props.review.rating} /></div>
           <div><TextBlock className="text-block" text={this.props.review.text} /></div>
         </div>
-        Yeah!
       </div>
     );
   }
