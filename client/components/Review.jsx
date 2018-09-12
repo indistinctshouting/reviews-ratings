@@ -13,8 +13,8 @@ export default class Review extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="review-sidebar">
+      <div className="review-container">
+        <div>
           <UserInfo owner={this.props.review.owner}/>
         </div>
         <div className="review-wrapper">

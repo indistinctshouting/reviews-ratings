@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const RatingBox = (props) => (
   <div style={{backgroundColor: "red", borderRadius: "5px", padding: "5px", width: "90px"}}>
