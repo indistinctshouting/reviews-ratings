@@ -9,7 +9,10 @@
   "scripts": {
     "fake": "node data/fakeDataGenerator.js",
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -27,12 +30,25 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "faker": "^4.1.0",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.4",
+    "regenerator-runtime": "^0.12.1",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ]
   },
   "version": "1.0.0",
   "main": "server.js",

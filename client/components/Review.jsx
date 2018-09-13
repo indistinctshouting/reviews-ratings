@@ -8,7 +8,7 @@ export default class Review extends React.Component {
     super(props);
     this.state = {
       // state vars tbd but I think I'll need em
-    }
+    };
   }
 
   render() {

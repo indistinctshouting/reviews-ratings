@@ -7,7 +7,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       reviews: []
-    }
+    };
   }
   
   componentDidMount() {
@@ -21,7 +21,7 @@ export default class App extends React.Component {
         console.log(response.data);
         this.setState({
           reviews: response.data
-        })
+        });
       });
   }
 
@@ -30,6 +30,6 @@ export default class App extends React.Component {
       <div>
         <ReviewList reviews={this.state.reviews}/>
       </div>
-    )
+    );
   }
 }

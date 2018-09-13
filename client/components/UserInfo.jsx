@@ -10,12 +10,12 @@ const UserInfo = (props) => (
     
     <div className="user-info">
       <div className="user-name">
-        <span>
+        <span className="user-info-text name-text">
           {props.owner.name}
         </span>
       </div>
       <div className="user-location">
-        <span>
+        <span className="user-info-text location-text">
           {props.owner.location}
         </span>
       </div>
@@ -23,28 +23,28 @@ const UserInfo = (props) => (
         <span className="friends-icon">
           <FontAwesomeIcon icon={faUserFriends}/>
         </span>
-        <span>
-          {props.owner.friends} Friends
+        <span className="user-info-text">
+          <b>{props.owner.friends}</b> Friends
         </span>
       </div>
       <div className="user-reviews">
         <span className="reviews-icon">
           <FontAwesomeIcon icon={faStar}/>
         </span>
-        <span>
-          {props.owner.reviewCount} Reviews
+        <span className="user-info-text">
+          <b>{props.owner.reviewCount}</b> Reviews
         </span>
       </div>
       <div className="user-photos">
         <span className="photos-icon">
           <FontAwesomeIcon icon={faCamera} />
         </span>
-        <span>
-          {props.owner.photos} Photos
+        <span className="user-info-text">
+          <b>{props.owner.photos}</b> Photos
         </span>
       </div>
       <div>
-        <span>
+        <span className="user-info-text elite">
           {props.owner.elite ? 'Elite \'18' : ''}
         </span>
       </div>
