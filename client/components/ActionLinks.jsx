@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ActionLinks = (props) => (
-  <ul className="action-links">
+  <ul>
     <li>Share review</li>
     <li>Embed review</li>
     <li>Compliment</li>

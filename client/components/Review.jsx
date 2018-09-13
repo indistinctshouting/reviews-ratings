@@ -17,7 +17,7 @@ export default class Review extends React.Component {
       <div className="review-container">
         <div className="sidebar-wrapper">
           <UserInfo owner={this.props.review.owner}/>
-          <ActionLinks />
+          <div className="action-links"><ActionLinks /></div>
         </div>
         <div className="review-wrapper">
           <div className="rating-box"><RatingBox rating={this.props.review.rating} /></div>
