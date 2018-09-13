@@ -1,24 +1,36 @@
 import React from 'react';
+import Button from './Button.jsx';
+import _ from 'lodash';
+
 
 export default class VoteButtons extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+  }
+  
+  handleButtonClick(count, clicked) {
+    if (!count && !clicked) {
+      count = 1;
+    } else if (!clicked) {
+      count += 1;
+    } else if (clicked) {
+      count -= 1;
+    }
+    console.log(count, clicked);
+    this.setState({
+      count,
+      clicked: !clicked
+    });
   }
 
   render() {
-    let count = {
-      useful: this.props.votes.useful || '',
-      funny: this.props.votes.funny || '',
-      cool: this.props.votes.cool || ''
-    };
     return (
       <div className="footer-buttons">
-        <button>Useful {count.useful}</button>
-        <button>Funny {count.funny}</button>
-        <button>Cool {count.cool}</button>
+        {
+          _.map(this.props.votes, (value, key) => {
+            return <Button name={key} count={value} handleButtonClick={this.handleButtonClick}/>;
+          })
+        }
       </div>
     );
   }
