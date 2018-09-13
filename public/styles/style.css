@@ -58,8 +58,12 @@ table {
 .review-list-container {
   display: grid;
   grid-template-columns: 633px;
-  grid-row-gap: 15px;
+  width: 633px;
   margin: auto;
+}
+
+.review-list-container:first-child {
+  border-top: 1px solid grey;
 }
 
 /* ----------------------------- *\
@@ -69,6 +73,17 @@ table {
 .review-container {
   display:grid;
   grid-template-columns: 1fr 2fr;
+  min-height: 215px;
+  padding-top: 18px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid grey;
+}
+
+.action-links {
+  display:none
+}
+.review-container:hover .action-links {
+  display:block
 }
 
 /* ----------------------------- *\

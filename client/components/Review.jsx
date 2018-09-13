@@ -2,6 +2,7 @@ import React from 'react';
 import RatingBox from './RatingBox.jsx';
 import TextBlock from './TextBlock.jsx';
 import UserInfo from './UserInfo.jsx';
+import ActionLinks from './ActionLinks.jsx';
 import VoteButtons from './VoteButtons.jsx';
 // might convert to stateless functional component
 export default class Review extends React.Component {
@@ -15,8 +16,9 @@ export default class Review extends React.Component {
   render() {
     return (
       <div className="review-container">
-        <div>
+        <div className="sidebar-wrapper">
           <UserInfo owner={this.props.review.owner}/>
+          <div className="action-links"><ActionLinks /></div>
         </div>
         <div className="review-wrapper">
           <div className="rating-box"><RatingBox rating={this.props.review.rating} /></div>
