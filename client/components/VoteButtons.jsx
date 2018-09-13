@@ -16,7 +16,6 @@ export default class VoteButtons extends React.Component {
     } else if (clicked) {
       count -= 1;
     }
-    console.log(count, clicked);
     this.setState({
       count,
       clicked: !clicked

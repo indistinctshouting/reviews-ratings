@@ -12,8 +12,11 @@ export default class Button extends React.Component {
 
   render() {
     let name = this.props.name[0].toUpperCase() + this.props.name.slice(1);
+    let count = this.state.count || '';
     return (
-      <button onClick={() => { this.handleButtonClick(this.state.count, this.state.clicked); }}>{name} {this.state.count}</button>
+      <button onClick={() => { this.handleButtonClick(this.state.count, this.state.clicked); }}>
+        {name} {count}
+      </button>
     );
   }
 }
