@@ -2,11 +2,8 @@ import React from 'react';
 import RatingBox from './RatingBox.jsx';
 import TextBlock from './TextBlock.jsx';
 import UserInfo from './UserInfo.jsx';
-<<<<<<< HEAD
 import ActionLinks from './ActionLinks.jsx';
-=======
 import VoteButtons from './VoteButtons.jsx';
->>>>>>> 751fe20143bf6739b14b563d953e373f9d2d8e55
 // might convert to stateless functional component
 export default class Review extends React.Component {
   constructor(props) {
