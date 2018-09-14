@@ -1,9 +1,9 @@
 import React from 'react';
-import RatingBox from './RatingBox.jsx';
 import TextBlock from './TextBlock.jsx';
 import UserInfo from './UserInfo.jsx';
 import ActionLinks from './ActionLinks.jsx';
 import VoteButtons from './VoteButtons.jsx';
+import ReviewHeader from './ReviewHeader.jsx';
 // might convert to stateless functional component
 export default class Review extends React.Component {
   constructor(props) {
@@ -21,7 +21,14 @@ export default class Review extends React.Component {
           <div className="action-links"><ActionLinks /></div>
         </div>
         <div className="review-wrapper">
-          <div className="rating-box"><RatingBox rating={this.props.review.rating} /></div>
+          <div>
+            <ReviewHeader 
+              rating={this.props.review.rating} 
+              date={this.props.review.date} 
+              updated={this.props.review.updated}
+              checkIns={this.props.review.owner.checkIns}
+            />
+          </div>
           <div><TextBlock className="text-block" text={this.props.review.text} /></div>
           <div className="vote-buttons"><VoteButtons votes={this.props.review.upvotes}/></div>
         </div>
