@@ -7,8 +7,8 @@ const db = require('./../database/');
 app.use(BodyParser.urlencoded({extended: true}));
 app.use(BodyParser.json());
 
-app.get('/reviews', (req, res) => {
-  db.getRestaurantReviews(req.query.id, (reviews) => {
+app.get('/reviews/id/:id', (req, res) => {
+  db.getRestaurantReviews(req.params.id, (reviews) => {
     res.send(reviews);
   });
 });

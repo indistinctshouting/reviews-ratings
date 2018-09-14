@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
 
   getReviewData(id) {
-    axios.get('/reviews', { params: { id }} )
+    axios.get(`/reviews/id/${id}`)
       .then((response) => {
         console.log(response.data);
         this.setState({
