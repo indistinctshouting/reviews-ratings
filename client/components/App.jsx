@@ -11,12 +11,12 @@ export default class App extends React.Component {
   }
   
   componentDidMount() {
-    // let randomRestaurantId = Math.floor((Math.random() * 100) + 1);
-    this.getReviewData(38);
+    let randomRestaurantId = Math.floor((Math.random() * 100) + 1);
+    this.getReviewData(randomRestaurantId);
   }
 
   getReviewData(id) {
-    axios.post('/reviews', {id})
+    axios.get('/reviews', { params: { id }} )
       .then((response) => {
         console.log(response.data);
         this.setState({
