@@ -138,5 +138,22 @@ table {
 \* ----------------------------- */
 
 .review-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-row-gap: 15px;
   padding: 0 15px;
+}
+
+/* ----------------------------- *\
+  Review Header
+\* ----------------------------- */
+
+.header-upper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header-container {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
 }
