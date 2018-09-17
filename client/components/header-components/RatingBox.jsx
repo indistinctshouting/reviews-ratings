@@ -18,7 +18,7 @@ const RatingBox = ({rating}) => {
   }
   return (
     <div className='stars'>
-      {// close but no cigar, just need to get the star centered then add conditionals in function to display correct hue for number of stars
+      {// close but no cigar, just need to get the star centered
         _.map([null, null, null, null, null], (star, i) => {
           if (i < rating) {
             return (
