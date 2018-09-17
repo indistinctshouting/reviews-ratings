@@ -4,20 +4,57 @@ exports[`<Review /> render() renders the component 1`] = `
 <div
   className="review-container"
 >
-  <div>
-    <UserInfo />
+  <div
+    className="sidebar-wrapper"
+  >
+    <UserInfo
+      owner={
+        Object {
+          "checkIns": 8,
+          "elite": false,
+          "friends": 22,
+          "location": "Caliton, VT",
+          "name": "Giovanny Reinger ",
+          "photos": 37,
+          "picture": "https://s3.amazonaws.com/uifaces/faces/twitter/dshster/128.jpg",
+          "reviewCount": 112,
+        }
+      }
+    />
+    <div
+      className="action-links"
+    >
+      <ActionLinks />
+    </div>
   </div>
   <div
     className="review-wrapper"
   >
-    <div
-      className="rating-box"
-    >
-      <RatingBox />
+    <div>
+      <ReviewHeader
+        checkIns={8}
+        date="2013-08-13T08:51:59.518Z"
+        rating={3}
+        updated={false}
+      />
     </div>
     <div>
       <TextBlock
         className="text-block"
+        text="Dolores quo quisquam est cumque corrupti omnis voluptatem. Dolorum reiciendis molestiae sunt velit omnis nihil dolorum atque. Illum suscipit earum excepturi eius harum. Aut nihil tenetur cupiditate aut eos aut. Culpa eveniet dolor delectus natus."
+      />
+    </div>
+    <div
+      className="vote-buttons"
+    >
+      <VoteButtons
+        votes={
+          Object {
+            "cool": 8,
+            "funny": 2,
+            "useful": 10,
+          }
+        }
       />
     </div>
   </div>

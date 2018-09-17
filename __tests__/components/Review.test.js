@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Review from '../../client/components/Review';
 
-const fakeReviews = [{ 
+const fakeReviews = { 
   owner: { 
     picture:
      'https://s3.amazonaws.com/uifaces/faces/twitter/dshster/128.jpg',
@@ -25,7 +25,7 @@ const fakeReviews = [{
     'Dolores quo quisquam est cumque corrupti omnis voluptatem. Dolorum reiciendis molestiae sunt velit omnis nihil dolorum atque. Illum suscipit earum excepturi eius harum. Aut nihil tenetur cupiditate aut eos aut. Culpa eveniet dolor delectus natus.',
   updated: false,
   __v: 0 
-}];
+};
 
 describe('<Review />', () => {
   describe('render()', () => {

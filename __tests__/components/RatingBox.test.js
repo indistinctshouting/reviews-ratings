@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import RatingBox from '../../client/components/RatingBox';
+import RatingBox from '../../client/components/header-components/RatingBox';
 
 describe('<RatingBox />', () => {
   describe('render()', () => {
