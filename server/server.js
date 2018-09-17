@@ -11,8 +11,8 @@ app.get('/reviews/id/:id', (req, res) => {
     res.send(reviews);
   });
 });
+app.use('/:id', express.static(__dirname + './../public'));
 
-app.use(express.static('public'));
 app.listen(3000, () => {
   console.log('Port 3000 we read you loud and clear');
 });

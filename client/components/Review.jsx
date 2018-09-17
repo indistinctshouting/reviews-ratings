@@ -8,17 +8,21 @@ import ReviewHeader from './ReviewHeader.jsx';
 export default class Review extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      // state vars tbd but I think I'll need em
-    };
+    this.props.review.owner.name = this.formatName(this.props.review.owner.name);
   }
 
+  formatName(name) {
+    let names = name.split(' ');
+    let lastInitial = `${names[1][0]}.`;
+    return `${names[0]} ${lastInitial}`;
+  }
+  
   render() {
     return (
       <div className="review-container">
         <div className="sidebar-wrapper">
           <UserInfo owner={this.props.review.owner}/>
-          <div className="action-links"><ActionLinks /></div>
+          <div className="action-links"><ActionLinks name={this.props.review.owner.name}/></div>
         </div>
         <div className="review-wrapper">
           <div>

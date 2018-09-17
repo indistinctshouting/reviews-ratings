@@ -12,8 +12,8 @@ export default class App extends React.Component {
   }
   
   componentDidMount() {
-    let randomRestaurantId = Math.floor((Math.random() * 100) + 1);
-    this.getReviewData(randomRestaurantId);
+    let restaurantId = window.location.pathname.split('/')[1];
+    this.getReviewData(restaurantId);
   }
 
   getReviewData(id) {

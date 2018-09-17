@@ -6,13 +6,13 @@ import { faMedal } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
-const ActionLinks = (props) => (
+const ActionLinks = ({name}) => (
   <ul className="action-links action-links-container">
     <li className="link">
       <div>
         <FontAwesomeIcon icon={faShareSquare}/>
       </div>
-      <div className="link-text">Share review</div>
+      <div className="link-text link-text-first">Share review</div>
     </li>
     <li className="link">
       <div>
@@ -36,7 +36,7 @@ const ActionLinks = (props) => (
       <div>
         <FontAwesomeIcon icon={faUserPlus}/>
       </div>
-      <div className="link-text">Follow (name here)</div>
+      <div className="link-text">Follow {name}</div>
     </li>
   </ul>
 );

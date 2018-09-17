@@ -58,10 +58,6 @@ body {
   color: #333;
 }
 
-.elite {
-  color: #f15c00;
-}
-
 .date {
   font-weight: normal;
   color: #666;
@@ -69,9 +65,16 @@ body {
 } 
 
 .user-info-text {
-  font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   color: #666;
+  font-weight: 400;
+}
+
+.location-text {
+  font-size: 1vw;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
 }
 
 .user-info-text b {
@@ -92,6 +95,12 @@ body {
 
 .link-text {
   font-weight: bold;
+  font-size: 12px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.link-text-first {
+  border-top: none;
 }
 
 .check-in-container {
@@ -103,8 +112,13 @@ body {
 .check-in-icon {
   color: #0073bb;
 }
+
+.elite {
+  font-weight: bold;
+  color: #f15c00;
+}
 /* ----------------------------- *\
-  Review List Container
+Review List Container
 \* ----------------------------- */
 
 .review-list-container {
@@ -125,7 +139,7 @@ body {
 .review-container {
   display:grid;
   grid-template-columns: 1fr 2fr;
-  min-height: 215px;
+  min-height: 240px;
   padding-top: 18px;
   padding-bottom: 17px;
   border-bottom: 1px solid grey;
@@ -159,6 +173,15 @@ body {
   text-decoration: underline;
 }
 
+.updated-flag strong {
+  font-weight: 700;
+  color: #666;
+}
+
+.updated-icon {
+  font-weight: 400;
+  color: #f15c00;
+}
 /* ----------------------------- *\
   Review Side Bar
 \* ----------------------------- */
@@ -178,7 +201,7 @@ body {
 
 .user-info {
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 18px);
   grid-row-gap: 2px;
 }
 
@@ -190,19 +213,6 @@ body {
   grid-column-gap: 4px;
 }
 
-.user-info-text {
-  font-size: 10px;
-}
-
-.name-text {
-  font-size: 14px;
-}
-
-.location-text {
-  font-size: 11px;
-  font-weight: bold;
-  color: #333;
-}
 
 /* ----------------------------- *\
   User Info Icons
