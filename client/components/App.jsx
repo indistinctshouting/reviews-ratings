@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import ReviewList from './ReviewList.jsx';
 
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +17,7 @@ export default class App extends React.Component {
   }
 
   getReviewData(id) {
-    axios.get('/reviews', { params: { id }} )
+    axios.get(`/reviews/id/${id}`)
       .then((response) => {
         console.log(response.data);
         this.setState({
