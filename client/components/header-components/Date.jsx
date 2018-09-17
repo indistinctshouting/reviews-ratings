@@ -7,7 +7,7 @@ export default class Date extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="date">
         {this.props.date.slice(0, 10).split('-').reverse().join('/')}
       </div>
     );

@@ -7,12 +7,37 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 const ActionLinks = (props) => (
-  <ul>
-    <li><FontAwesomeIcon icon={faShareSquare}/>Share review</li>
-    <li><FontAwesomeIcon icon={faCode}/>Embed review</li>
-    <li><FontAwesomeIcon icon={faMedal}/>Compliment</li>
-    <li><FontAwesomeIcon icon={faComments}/>Send message</li>
-    <li><FontAwesomeIcon icon={faUserPlus}/>Follow (name here)</li>
+  <ul className="action-links action-links-container">
+    <li className="link">
+      <div>
+        <FontAwesomeIcon icon={faShareSquare}/>
+      </div>
+      <div className="link-text">Share review</div>
+    </li>
+    <li className="link">
+      <div>
+        <FontAwesomeIcon icon={faCode}/>
+      </div>
+      <div className="link-text">Embed review</div>
+    </li>
+    <li className="link">
+      <div>
+        <FontAwesomeIcon icon={faMedal}/>
+      </div>
+      <div className="link-text">Compliment</div>
+    </li>
+    <li className="link">
+      <div>
+        <FontAwesomeIcon icon={faComments}/>
+      </div>
+      <div className="link-text">Send message</div>
+    </li>
+    <li className="link">
+      <div>
+        <FontAwesomeIcon icon={faUserPlus}/>
+      </div>
+      <div className="link-text">Follow (name here)</div>
+    </li>
   </ul>
 );
 

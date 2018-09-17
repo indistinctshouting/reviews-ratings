@@ -9,17 +9,17 @@ const RatingBox = (props) => (
       _.map([null, null, null, null, null], (star, i) => {
         if (i < props.rating) {
           return (
-            <div className='star-box' style={{backgroundColor: 'red', borderRadius: '5px', width: '25px', height: '25px'}}>
+            <div className='star-box' style={{backgroundColor: 'red', borderRadius: '4px'}}>
               <div>
-                <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white', width: '18px', height: '18px'}}/>
+                <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white'}}/>
               </div>
             </div>
           );
         } else {
           return (
-            <div className='star-box' style={{backgroundColor: 'grey', borderRadius: '5px', width: '25px', height: '25px'}}>
+            <div className='star-box' style={{backgroundColor: 'grey', borderRadius: '5px'}}>
               <div>
-                <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white', width: '18px', height: '18px'}}/>
+                <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white'}}/>
               </div>
             </div>
           );        

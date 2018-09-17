@@ -51,6 +51,58 @@ table {
   Typography
 \* ----------------------------- */
 
+body {
+  font-size: 14px;
+  line-height: 1.28571em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #333;
+}
+
+.elite {
+  color: #f15c00;
+}
+
+.date {
+  font-weight: normal;
+  color: #666;
+  text-align: center;
+} 
+
+.user-info-text {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+}
+
+.user-info-text b {
+  font-weight: bold;
+  color: #666;
+}
+
+.name-text {
+  font-size: 14px;
+  line-height: 1.28571em;
+  font-weight: 700;
+  color: #0073bb;
+}
+
+.name-text:hover {
+  text-decoration: underline;
+}
+
+.link-text {
+  font-weight: bold;
+}
+
+.check-in-container {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+}
+
+.check-in-icon {
+  color: #0073bb;
+}
 /* ----------------------------- *\
   Review List Container
 \* ----------------------------- */
@@ -80,10 +132,31 @@ table {
 }
 
 .action-links {
-  display:none
+  display: none;
+  padding-left: 15px;
+  color: #0073bb;
+}
+
+.action-links-container {
+  padding-left: 0;
 }
 .review-container:hover .action-links {
-  display:block
+  display: grid;
+  grid-template-rows: repeat(5, 19px);
+  width: 217;
+  height: 240px;
+}
+.link {
+  display: grid;
+  grid-template-columns: 14% 86%;
+}
+
+.action-links li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.action-links li:hover {
+  text-decoration: underline;
 }
 
 /* ----------------------------- *\
@@ -109,6 +182,14 @@ table {
   grid-row-gap: 2px;
 }
 
+.user-friends,
+.user-photos,
+.user-reviews {
+  display: grid;
+  grid-template-columns: 18px 100%;
+  grid-column-gap: 4px;
+}
+
 .user-info-text {
   font-size: 10px;
 }
@@ -119,6 +200,8 @@ table {
 
 .location-text {
   font-size: 11px;
+  font-weight: bold;
+  color: #333;
 }
 
 /* ----------------------------- *\
@@ -131,6 +214,7 @@ table {
   width: 18px;
   height: 18px;
   margin-right: 4px;
+  color: #f15c00;
 }
 
 /* ----------------------------- *\
@@ -146,7 +230,8 @@ table {
 
 .stars {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 18px);
+  grid-column-gap: 3px;
 }
 
 .star-box {
@@ -155,6 +240,8 @@ table {
   grid-template-rows: 1fr;
   align-items: center;
   text-align: center;
+  font-size: 12px;
+  height: 18px;
 }
 
 /* ----------------------------- *\

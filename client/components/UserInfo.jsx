@@ -3,7 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faCamera } from '@fortawesome/free-solid-svg-icons';
-
+const formatName = (name) => {
+  let names = name.split(' ');
+  let lastInitial = `${names[1][0]}.`;
+  return `${names[0]} ${lastInitial}`;
+};
 const UserInfo = (props) => (
   <div className="review-sidebar">
     <img className="user-avatar" src={props.owner.picture} />
@@ -11,7 +15,7 @@ const UserInfo = (props) => (
     <div className="user-info">
       <div className="user-name">
         <span className="user-info-text name-text">
-          {props.owner.name}
+          {formatName(props.owner.name)}
         </span>
       </div>
       <div className="user-location">
