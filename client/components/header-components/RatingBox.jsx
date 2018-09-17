@@ -4,13 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const RatingBox = (props) => (
-  <div style={{backgroundColor: "red", borderRadius: "5px", padding: "5px", width: "90px"}}>
-    {
+  <div className='stars'>
+    {// close but no cigar, just need to get the star centered then add conditionals in function to display correct hue for number of stars
       _.map([null, null, null, null, null], (star, i) => {
         if (i < props.rating) {
-          return <span><FontAwesomeIcon icon={faStar} style={{color: "gold"}}/></span>;
+          return (
+            <div className='star-box' style={{backgroundColor: 'red', borderRadius: '5px', width: '25px', height: '25px'}}>
+              <div>
+                <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white', width: '18px', height: '18px'}}/>
+              </div>
+            </div>
+          );
         } else {
-          return <span><FontAwesomeIcon icon={faStar} style={{color: "white"}}/></span>;
+          return (
+            <div className='star-box' style={{backgroundColor: 'grey', borderRadius: '5px', width: '25px', height: '25px'}}>
+              <div>
+                <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white', width: '18px', height: '18px'}}/>
+              </div>
+            </div>
+          );        
         }
       })
     }

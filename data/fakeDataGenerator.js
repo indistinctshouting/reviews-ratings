@@ -2,7 +2,7 @@ const faker = require('faker');
 
 const gimmeRandomNumber = (max, min = 0) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+};
 
 const gimmeTrueOrFalse = (trueFreq = 0.5) => {
   let randomVal = Math.random();
@@ -11,7 +11,7 @@ const gimmeTrueOrFalse = (trueFreq = 0.5) => {
   } else {
     return false;
   }
-}
+};
 
 let reviews = [];
 
