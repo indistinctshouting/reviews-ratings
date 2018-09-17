@@ -109,10 +109,6 @@ body {
   color: #666;
 }
 
-.check-in-icon {
-  color: #0073bb;
-}
-
 .elite {
   font-weight: bold;
   color: #f15c00;
@@ -266,4 +262,50 @@ Review List Container
 .header-container {
   display: grid;
   grid-template-rows: 2fr 1fr;
+}
+
+/* ----------------------------- *\
+  Footer Buttons
+\* ----------------------------- */
+
+.footer-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  height: 30px;
+  grid-column-gap: 8px;
+}
+
+.btn,
+.btn-alt {
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.5em;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  border: 1px solid;
+}
+
+.btn {
+  font-weight: 400;
+  color: #666;
+  border-color: #ccc;
+  background-color: #f7f7f7;
+  background: linear-gradient(#fff,#f7f7f7);
+}
+
+.btn b {
+  font-weight: 700;
+}
+
+.btn-alt {
+  color: white;
+  text-shadow: rgba(0,0,0,0.2) 0 -1px;
+  border-color: #007abe;
+  background: #0097ec;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #fff;
 }
