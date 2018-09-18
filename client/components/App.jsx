@@ -1,8 +1,19 @@
 import React from 'react';
 import axios from 'axios';
 import ReviewList from './ReviewList.jsx';
+import styled, { injectGlobal } from 'styled-components';
+import reset from 'styled-reset';
 
+injectGlobal`
+  ${reset}
+`;
 
+const Wrapper = styled.body`
+  font-size: 14px;
+  line-height: 1.28571em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #333;
+`;
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -28,9 +39,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
         <ReviewList reviews={this.state.reviews}/>
-      </div>
+      </Wrapper>
     );
   }
 }

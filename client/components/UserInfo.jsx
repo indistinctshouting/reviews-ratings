@@ -3,53 +3,118 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import styled from 'styled-components';
+
+const SidebarWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 15px;
+`;
+
+const UserInfoWrapper = styled.div`
+  display: grid;
+  grid-template-rows: repeat(5, 18px);
+  grid-row-gap: 2px;
+`;
+
+const UserInfoText = styled.span`
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+`;
+
+const LocationText = styled.span`
+  font-size: 1vw;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+`;
+
+const UserInfoTextBold = styled(UserInfoText)`
+  font-weight: 700;
+`;
+
+const NameText = styled(UserInfoText)`
+  font-size: 14px;
+  line-height: 1.28571em;
+  font-weight: 700;
+  color: #0073bb;
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
+const EliteText = styled(UserInfoText)`
+  font-weight: 700;
+  color: #f15c00;
+`;
+
+const Avatar = styled.img`
+  width: 60px;
+  height: 60px;
+  margin-right: 9px;
+  border-radius: 4px;
+`;
+
+const InfoWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 18px 100%;
+  grid-column-gap: 4px;
+  .info-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    color: #f15c00;
+  }
+`;
+
 
 const UserInfo = (props) => (
-  <div className="review-sidebar">
-    <img className="user-avatar" src={props.owner.picture} />
+  <SidebarWrapper>
+    <Avatar src={props.owner.picture} />
     
-    <div className="user-info">
+    <UserInfoWrapper>
       <div className="user-name">
-        <span className="user-info-text name-text">
+        <NameText>
           {props.owner.name}
-        </span>
+        </NameText>
       </div>
       <div className="user-location">
-        <h5 className="user-info-text location-text">
+        <LocationText>
           {props.owner.location}
-        </h5>
+        </LocationText>
       </div>
-      <div className="user-friends">
-        <span className="friends-icon">
+      <InfoWrapper>
+        <span className="info-icon">
           <FontAwesomeIcon icon={faUserFriends}/>
         </span>
-        <span className="user-info-text">
-          <b>{props.owner.friends}</b> Friends
-        </span>
-      </div>
-      <div className="user-reviews">
-        <span className="reviews-icon">
+        <UserInfoText>
+          <UserInfoTextBold>{props.owner.friends}</UserInfoTextBold> Friends
+        </UserInfoText>
+      </InfoWrapper>
+      <InfoWrapper>
+        <span className="info-icon">
           <FontAwesomeIcon icon={faStar}/>
         </span>
-        <span className="user-info-text">
-          <b>{props.owner.reviewCount}</b> Reviews
-        </span>
-      </div>
-      <div className="user-photos">
-        <span className="photos-icon">
+        <UserInfoText>
+          <UserInfoTextBold>{props.owner.reviewCount}</UserInfoTextBold> Reviews
+        </UserInfoText>
+      </InfoWrapper>
+      <InfoWrapper>
+        <span className="info-icon">
           <FontAwesomeIcon icon={faCamera} />
         </span>
-        <span className="user-info-text">
-          <b>{props.owner.photos}</b> Photos
-        </span>
-      </div>
+        <UserInfoText>
+          <UserInfoTextBold>{props.owner.photos}</UserInfoTextBold> Photos
+        </UserInfoText>
+      </InfoWrapper>
       <div>
-        <span className="user-info-text elite">
+        <EliteText>
           {props.owner.elite ? 'Elite \'18' : ''}
-        </span>
+        </EliteText>
       </div>
-    </div>
-  </div>
+    </UserInfoWrapper>
+  </SidebarWrapper>
 );
 
 export default UserInfo;

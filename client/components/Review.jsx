@@ -4,39 +4,67 @@ import UserInfo from './UserInfo.jsx';
 import ActionLinks from './ActionLinks.jsx';
 import VoteButtons from './VoteButtons.jsx';
 import ReviewHeader from './ReviewHeader.jsx';
-// might convert to stateless functional component
-export default class Review extends React.Component {
-  constructor(props) {
-    super(props);
-    this.props.review.owner.name = this.formatName(this.props.review.owner.name);
-  }
+import styled from 'styled-components';
 
-  formatName(name) {
+const ReviewWrapper = styled.div`
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 240px;
+  padding-top: 18px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #e6e6e6;
+  :hover .action-links {
+    display: grid;
+    grid-template-rows: repeat(5, 19px);
+    width: 217;
+    height: 240px;
+  }
+`;
+
+// get a better idea of the ratios for the text wrapper
+const ReviewTextWrapper = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-row-gap: 15px;
+  padding: 0 15px;
+`;
+
+const ActionLinksWrapper = styled.div`
+  display: none;
+`;
+
+const Review = ({review}) => {
+  
+  const formatName = (name) => {
     let names = name.split(' ');
     let lastInitial = `${names[1][0]}.`;
     return `${names[0]} ${lastInitial}`;
-  }
-  
-  render() {
-    return (
-      <div className="review-container">
-        <div className="sidebar-wrapper">
-          <UserInfo owner={this.props.review.owner}/>
-          <div className="action-links"><ActionLinks name={this.props.review.owner.name}/></div>
-        </div>
-        <div className="review-wrapper">
-          <div>
-            <ReviewHeader 
-              rating={this.props.review.rating} 
-              date={this.props.review.date} 
-              updated={this.props.review.updated}
-              checkIns={this.props.review.owner.checkIns}
-            />
-          </div>
-          <div><TextBlock className="text-block" text={this.props.review.text} /></div>
-          <div className="vote-buttons"><VoteButtons votes={this.props.review.upvotes}/></div>
-        </div>
+  };
+
+  review.owner.name = formatName(review.owner.name);
+
+  return (
+    <ReviewWrapper>
+      <div className="sidebar-wrapper">
+        <UserInfo owner={review.owner}/>
+        <ActionLinksWrapper className="action-links">
+          <ActionLinks name={review.owner.name}/>
+        </ActionLinksWrapper>
       </div>
-    );
-  }
-}
+      <ReviewTextWrapper>
+        <div>
+          <ReviewHeader 
+            rating={review.rating} 
+            date={review.date} 
+            updated={review.updated}
+            checkIns={review.owner.checkIns}
+          />
+        </div>
+        <div><TextBlock className="text-block" text={review.text} /></div>
+        <div className="vote-buttons"><VoteButtons votes={review.upvotes}/></div>
+      </ReviewTextWrapper>
+    </ReviewWrapper>
+  );
+};
+
+export default Review;

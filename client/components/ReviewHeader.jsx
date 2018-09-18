@@ -3,16 +3,27 @@ import RatingBox from './header-components/RatingBox.jsx';
 import Date from './header-components/Date.jsx';
 import UpdatedFlag from './header-components/UpdatedFlag.jsx';
 import CheckInsFlag from './header-components/CheckInsFlag.jsx';
+import styled from 'styled-components';
+
+const ReviewHeaderWrapper = styled.div`
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+`;
+
+const HeaderUpper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
 
 const ReviewHeader = ({ rating, date, updated, checkIns}) => (
-  <div className="header-container">
-    <div className="header-upper">
+  <ReviewHeaderWrapper>
+    <HeaderUpper>
       <RatingBox rating={rating}/>
       <Date date={date}/>
       <UpdatedFlag updated={updated} />
-    </div>
+    </HeaderUpper>
     <CheckInsFlag checkIns={checkIns}/>
-  </div>
+  </ReviewHeaderWrapper>
 );
 
 export default ReviewHeader;
