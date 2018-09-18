@@ -7,16 +7,18 @@ const StyledDate = styled.div`
   text-align: center;
 `;
 
-export default class Date extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Date = ({date}) => {
+  date = date.slice(0, 10).split('-').map((val) => {
+    if (val[0] === '0') {
+      return val[1];
+    }
+    return val;
+  });
+  return (
+    <StyledDate>
+      {`${date[1]}/${date[2]}/${date[0]}`}
+    </StyledDate>
+  );
+};
 
-  render() {
-    return (
-      <StyledDate>
-        {this.props.date.slice(0, 10).split('-').reverse().join('/')}
-      </StyledDate>
-    );
-  }
-}
+export default Date;

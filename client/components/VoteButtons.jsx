@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const ButtonsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 270px;
+  width: 280px;
   height: 30px;
   grid-column-gap: 8px;
 `;
