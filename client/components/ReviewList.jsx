@@ -10,7 +10,7 @@ const ReviewListContainer = styled.ul`
   margin: auto;
 
   :first-child {
-    border-top: 1px solid grey;
+    border-top: 1px solid #e6e6e6;
   }
 `;
 
