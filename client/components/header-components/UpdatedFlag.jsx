@@ -4,9 +4,6 @@ import { faSync } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const UpdatedFlagWrapper = styled.div`
-  display: list-item;
-  list-style-type: disk;
-  list-style-position: inside;
   width 175px;
   font-size: 12px;
   font-weight: 700;

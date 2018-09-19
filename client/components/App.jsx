@@ -4,9 +4,9 @@ import ReviewList from './ReviewList.jsx';
 import styled, { injectGlobal } from 'styled-components';
 import reset from 'styled-reset';
 
-injectGlobal`
-  ${reset}
-`;
+// injectGlobal`
+//   ${reset}
+// `;
 
 const Wrapper = styled.body`
   font-size: 14px;

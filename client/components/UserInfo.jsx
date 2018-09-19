@@ -24,9 +24,10 @@ const UserInfoText = styled.span`
 `;
 
 const LocationText = styled.span`
-  font-size: 1vw;
+  font-size: 12px;
   font-weight: 700;
   color: #333;
+  overflow: hidden;
   white-space: nowrap;
 `;
 
