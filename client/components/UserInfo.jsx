@@ -90,7 +90,7 @@ const UserInfo = (props) => (
           <FontAwesomeIcon icon={faUserFriends}/>
         </span>
         <UserInfoText>
-          <UserInfoTextBold>{props.owner.friends}</UserInfoTextBold> Friends
+          <UserInfoTextBold>{props.owner.friends}</UserInfoTextBold> friends
         </UserInfoText>
       </InfoWrapper>
       <InfoWrapper>
@@ -98,7 +98,7 @@ const UserInfo = (props) => (
           <FontAwesomeIcon icon={faStar}/>
         </span>
         <UserInfoText>
-          <UserInfoTextBold>{props.owner.reviewCount}</UserInfoTextBold> Reviews
+          <UserInfoTextBold>{props.owner.reviewCount}</UserInfoTextBold> reviews
         </UserInfoText>
       </InfoWrapper>
       <InfoWrapper>
@@ -106,7 +106,7 @@ const UserInfo = (props) => (
           <FontAwesomeIcon icon={faCamera} />
         </span>
         <UserInfoText>
-          <UserInfoTextBold>{props.owner.photos}</UserInfoTextBold> Photos
+          <UserInfoTextBold>{props.owner.photos}</UserInfoTextBold> photos
         </UserInfoText>
       </InfoWrapper>
       <div>

@@ -14,6 +14,7 @@ const ReviewWrapper = styled.div`
   padding-bottom: 17px;
   border-bottom: 1px solid #e6e6e6;
   :hover .action-links {
+    opacity: 1;
     display: grid;
     grid-template-rows: repeat(5, 19px);
     width: 217;
@@ -21,7 +22,6 @@ const ReviewWrapper = styled.div`
   }
 `;
 
-// get a better idea of the ratios for the text wrapper
 const ReviewTextWrapper = styled.div`
   display: grid;
   grid-template-rows: min-content min-content 60px;
@@ -30,7 +30,13 @@ const ReviewTextWrapper = styled.div`
 `;
 
 const ActionLinksWrapper = styled.div`
-  display: none;
+  display: grid;
+  grid-template-rows: repeat(5, 19px);
+  width: 217;
+  height: 130px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
 `;
 
 const Review = ({review}) => {
