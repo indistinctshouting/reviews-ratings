@@ -8,12 +8,13 @@ import reset from 'styled-reset';
 //   ${reset}
 // `;
 
-const Wrapper = styled.body`
+const Wrapper = styled.div`
   font-size: 14px;
   line-height: 1.28571em;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   color: #333;
 `;
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
