@@ -25,14 +25,14 @@ const UserInfoText = styled.span`
 
 const UserLocation = styled.div`
   width: 117px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const LocationText = styled.span`
-  font-size: 1vw;
+  font-size: 12px;
   font-weight: 700;
   color: #333;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 `;
 
 const UserInfoTextBold = styled(UserInfoText)`
