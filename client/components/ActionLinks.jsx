@@ -14,6 +14,7 @@ const LinkText = styled.div`
   padding-top: 3px;
   padding-bottom: 3px;
   :hover {
+    cursor: pointer;
     text-decoration: underline;
   }
 `;

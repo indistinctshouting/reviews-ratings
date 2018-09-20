@@ -45,6 +45,7 @@ const NameText = styled(UserInfoText)`
   font-weight: 700;
   color: #0073bb;
   :hover {
+    cursor: pointer;
     text-decoration: underline;
   }
 `;
