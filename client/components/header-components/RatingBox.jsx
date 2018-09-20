@@ -18,7 +18,7 @@ const StarWrapper = styled.div`
   grid-template-rows: 1fr;
   align-items: center;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   height: 18px;
   border-radius: 4px;
 `;
@@ -44,7 +44,7 @@ const RatingBox = ({rating}) => {
             return (
               <StarWrapper style={{backgroundColor: starColor}}>
                 <div>
-                  <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white'}}/>
+                  <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white'}}/>
                 </div>
               </StarWrapper>
             );
@@ -52,7 +52,7 @@ const RatingBox = ({rating}) => {
             return (
               <StarWrapper style={{backgroundColor: 'grey'}}>
                 <div>
-                  <FontAwesomeIcon icon={faStar} style={{align: 'vertical', color: 'white'}}/>
+                  <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white'}}/>
                 </div>
               </StarWrapper>
             );        
