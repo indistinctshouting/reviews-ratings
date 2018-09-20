@@ -43,13 +43,13 @@ const RatingBox = ({rating}) => {
           if (i < rating) {
             return (
               <StarWrapper style={{backgroundColor: starColor}}>
-                <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white', position: 'relative', top: '1px'}}/>
+                <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white', position: 'relative', top: '1px', right: '0.5px'}}/>
               </StarWrapper>
             );
           } else {
             return (
               <StarWrapper style={{backgroundColor: 'grey'}}>
-                <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white', position: 'relative', top: '1px'}}/>
+                <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white', position: 'relative', top: '1px', right: '0.5px'}}/>
               </StarWrapper>
             );        
           }
