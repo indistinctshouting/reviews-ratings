@@ -10,6 +10,7 @@ const ReviewWrapper = styled.div`
   display:grid;
   grid-template-columns: 1fr 2fr;
   min-height: 240px;
+  width: 440;
   padding-top: 18px;
   padding-bottom: 17px;
   border-bottom: 1px solid #e6e6e6;
@@ -27,6 +28,7 @@ const ReviewTextWrapper = styled.div`
   grid-template-rows: min-content min-content 60px;
   grid-row-gap: 15px;
   padding: 0 15px;
+  width: 382px;
 `;
 
 const ActionLinksWrapper = styled.div`

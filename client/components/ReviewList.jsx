@@ -5,10 +5,9 @@ import styled from 'styled-components';
 
 const ReviewListContainer = styled.ul`
   display: grid;
-  grid-template-columns: 633px;
-  width: 633px;
+  grid-template-columns: 648px;
+  width: 648px;
   margin: auto;
-
   :first-child {
     border-top: 1px solid #e6e6e6;
   }

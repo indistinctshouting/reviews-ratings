@@ -23,11 +23,15 @@ const UserInfoText = styled.span`
   font-weight: 400;
 `;
 
+const UserLocation = styled.div`
+  width: 117px;
+`;
+
 const LocationText = styled.span`
-  font-size: 12px;
+  font-size: 1vw;
   font-weight: 700;
   color: #333;
-  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 `;
 
@@ -80,11 +84,11 @@ const UserInfo = (props) => (
           {props.owner.name}
         </NameText>
       </div>
-      <div className="user-location">
+      <UserLocation>
         <LocationText>
           {props.owner.location}
         </LocationText>
-      </div>
+      </UserLocation>
       <InfoWrapper>
         <span className="info-icon">
           <FontAwesomeIcon icon={faUserFriends}/>
