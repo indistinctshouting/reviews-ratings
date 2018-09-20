@@ -11,20 +11,20 @@ const LinkText = styled.div`
   font-weight: bold;
   font-size: 12px;
   border-top: 1px solid #e6e6e6;
+  padding-top: 3px;
+  padding-bottom: 3px;
   :hover {
     text-decoration: underline;
   }
 `;
-
+  
 const FirstLinkText = styled(LinkText)`
   border-top: none;
 `;
-
+  
 const LinkWrapper = styled.li`
   display: grid;
   grid-template-columns: 14% 86%;
-  padding-top: 3px;
-  padding-bottom: 3px;
 `;
 
 const LinkContainer = styled.ul`

@@ -12,11 +12,11 @@ const RatingBoxWrapper = styled.div`
   grid-column-gap: 3px;
 `;
 
+// display: grid;
+// grid-template-columns: 1fr;
+// grid-template-rows: 1fr;
+// align-items: center;
 const StarWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
   text-align: center;
   font-size: 11px;
   height: 18px;
@@ -43,17 +43,13 @@ const RatingBox = ({rating}) => {
           if (i < rating) {
             return (
               <StarWrapper style={{backgroundColor: starColor}}>
-                <div>
-                  <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white'}}/>
-                </div>
+                <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white', position: 'relative', top: '1px'}}/>
               </StarWrapper>
             );
           } else {
             return (
               <StarWrapper style={{backgroundColor: 'grey'}}>
-                <div>
-                  <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white'}}/>
-                </div>
+                <FontAwesomeIcon icon={faStar} style={{textAlign: 'center', color: 'white', position: 'relative', top: '1px'}}/>
               </StarWrapper>
             );        
           }

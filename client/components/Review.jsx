@@ -18,7 +18,7 @@ const ReviewWrapper = styled.div`
     opacity: 1;
     display: grid;
     grid-template-rows: repeat(5, 19px);
-    width: 217;
+    width: 217px;
     height: 130px;
   }
 `;
@@ -34,7 +34,7 @@ const ReviewTextWrapper = styled.div`
 const ActionLinksWrapper = styled.div`
   display: grid;
   grid-template-rows: repeat(5, 19px);
-  width: 217;
+  width: 217px;
   height: 130px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
