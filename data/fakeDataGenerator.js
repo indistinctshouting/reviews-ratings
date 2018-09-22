@@ -1,6 +1,6 @@
 const faker = require('faker');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fec');
+mongoose.connect('mongodb://172.17.0.2:27017/fec');
 
 const reviewSchema = new mongoose.Schema({
   reviewId: Number, 

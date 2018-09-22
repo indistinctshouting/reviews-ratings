@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fec');
+mongoose.connect('mongodb://18.191.172.193:27017/fec');
 mongoose.connection.on('error', console.error.bind(console, 'connection error'));
 mongoose.connection.once('open', () => {
   console.log('CONNECTED');
